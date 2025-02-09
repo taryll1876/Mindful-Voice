@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood Journal & Horoscope</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <a href="javascript:void(0);" onclick="showMoodSelection()">Mood Journal</a>
+            <a href="#horoscopes">Horoscopes</a>
+            <a href="#tarot">Tarot</a>
+            <a href="#zodiac">Zodiac Signs</a>
+        </nav>
+    </header>
+
+    <!-- Dashboard -->
+    <section id="dashboard">
+        <h2>Welcome to Your Daily Insights</h2>
+        <button onclick="showMoodSelection()">Select Your Mood</button>
+    </section>
+
+    <!-- Mood Selection & Quotes -->
+    <section id="mood-selection" class="hidden">
+        <h3>Select Your Mood</h3>
+        <div class="mood-buttons">
+            <button onclick="selectMood('happy')">Happy</button>
+            <button onclick="selectMood('okay')">Okay</button>
+            <button onclick="selectMood('sad')">Sad</button>
+            <button onclick="selectMood('angry')">Angry</button>
+        </div>
+    </section>
+
+    <section id="quotes" class="hidden">
+        <h3>Your Quote</h3>
+        <p id="quote-text"></p>
+        <textarea id="journal-entry" placeholder="Write your thoughts..."></textarea>
+        <button onclick="saveEntry()">Save Entry</button>
+        <button onclick="backToMoodSelection()">Back</button>
+    </section>
+
+    <!-- Journal Entries -->
+    <section id="journal-entries" class="hidden">
+        <h3>Your Journal Entries</h3>
+    </section>
+
+    <!-- Horoscope Section -->
+    <section id="horoscopes">
+        <h3>Today's Horoscope</h3>
+        <div id="horoscope-content">Great opportunities await!</div>
+    </section>
+
+    <!-- Tarot Readings -->
+    <section id="tarot">
+        <h3>Tarot Readings</h3>
+        <div id="tarot-content">Discover your tarot reading for today.</div>
+    </section>
+
+    <!-- Zodiac Signs -->
+    <section id="zodiac">
+        <h3>Zodiac Signs</h3>
+        <div id="zodiac-content">Explore your zodiac insights.</div>
+    </section>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
